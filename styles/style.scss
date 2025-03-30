@@ -1,0 +1,55 @@
+$background-color: #f2f2f2;
+$text-color: #000000;
+$link-color: #b8cee4;
+$main-color: #c8d8e4;
+$sidebar-color: #2b6777;
+
+@mixin background($color) {
+  background-color: $color;
+}
+
+body {
+  @include background($background-color);
+  color: $text-color;
+  
+}
+.title {
+  flex: 2;
+  @include background(#fffefe);
+  text-align: center;
+}
+.container {
+  display: flex;
+  width: 100vw;
+  margin-left: 5px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  .main {
+    flex: 2;
+    @include background($main-color);
+    padding: 1rem;
+  }
+
+  summary {
+    @media (min-width: 800px){
+      &:hover {
+        background-color: #d0d0d0;
+      }
+    }
+  }
+
+  .sidebar {
+    flex: 1;
+    padding: 1rem;
+    @include background($sidebar-color);
+    color: #ffffff;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+}
