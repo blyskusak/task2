@@ -239,6 +239,9 @@
   .max-w-250 {
     max-width: calc(var(--spacing) * 250);
   }
+  .min-w-full {
+    min-width: 100%;
+  }
   .flex-2\/7 {
     flex: calc(2/7 * 100%);
   }
